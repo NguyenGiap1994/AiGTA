@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Grow Mini App</title>
+
+  <!-- Telegram WebApp SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: white;
+    }
+
+    .container {
+      padding: 15px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .coin {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .tp {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .earn {
+      color: #00ffa6;
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn button {
+      flex: 1;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .buy {
+      background: linear-gradient(90deg, #3b82f6, #22c55e);
+      color: white;
+    }
+
+    .refer {
+      background: #111827;
+      color: white;
+      border: 1px solid #374151;
+    }
+
+    .plan {
+      background: #111827;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 10px;
+    }
+
+    .plan-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .roi {
+      float: right;
+      color: #38bdf8;
+    }
+
+    .wallet {
+      margin-top: 10px;
+      padding: 15px;
+      background: #111827;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .withdraw {
+      background: #3b82f6;
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>🚀 AIGROW</h2>
+
+  <!-- CARD -->
+  <div class="card">
+    <div class="coin">🪙</div>
+    <div>TRADE POWER</div>
+    <div class="tp">1.0</div>
+    <div class="earn">Daily Earn: $0.06</div>
+
+    <div class="btn">
+      <button class="buy" onclick="buy()">BUY TP</button>
+      <button class="refer" onclick="refer()">REFER</button>
+    </div>
+  </div>
+
+  <!-- WALLET -->
+  <div class="wallet">
+    <div>
+      <div>Wallet</div>
+      <strong>0.00 USDT</strong>
+    </div>
+    <div class="withdraw" onclick="withdraw()">Withdraw</div>
+  </div>
+
+  <!-- PLANS -->
+  <h3>Investment Plans</h3>
+
+  <div class="plan">
+    <span class="plan-title">Starter</span>
+    <span class="roi">5.5% / day</span>
+    <div>$1 - $40</div>
+  </div>
+
+  <div class="plan">
+    <span class="plan-title">Bronze</span>
+    <span class="roi">6% / day</span>
+    <div>$49 - $300</div>
+  </div>
+
+  <div class="plan">
+    <span class="plan-title">Silver</span>
+    <span class="roi">6.5% / day</span>
+    <div>$499 - $999</div>
+  </div>
+
+  <div class="plan">
+    <span class="plan-title">Gold</span>
+    <span class="roi">7% / day</span>
+    <div>$1000 - $10000</div>
+  </div>
+
+</div>
+
+<script>
+  const tg = window.Telegram.WebApp;
+  tg.expand();
+
+  function buy() {
+    alert("Chức năng mua TP");
+  }
+
+  function refer() {
+    alert("Chức năng giới thiệu");
+  }
+
+  function withdraw() {
+    alert("Chức năng rút tiền");
+  }
+</script>
+
+</body>
+</html>
